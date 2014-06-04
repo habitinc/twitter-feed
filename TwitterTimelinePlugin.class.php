@@ -8,6 +8,10 @@ if(!class_exists('TwitterOAuth')){
 	require_once('lib/twitteroauth.php');
 }
 
+if(!class_exists('TwitterEntitiesLinker')){
+	require_once('lib/twitter_entities_linker.php');
+}
+
 class TwitterTimelinePlugin extends AllSpark
 {
 	var $redirect_url_path = 'twitter_auth';
