@@ -68,16 +68,16 @@ class TwitterTimelinePlugin extends AllSpark
 		
 	}
 	
-	private $apiKeyKey			= 'hbt_TwitterTimelinePlugin_apiKey';
+	private $apiKeyKey		= 'hbt_TwitterTimelinePlugin_apiKey';
 	private $apiSecretKey		= 'hbt_TwitterTimelinePlugin_apiSecretKey';
 	private $clientIDKey		= 'hbt_TwitterTimelinePlugin_accessToken';
 	private $clientSecretKey	= 'hbt_TwitterTimelinePlugin_accessTokenSecret';
 	
 	private $oauthTokenKey		= 'hbt_TwitterTimelinePlugin_oauth_token';
-	private $oauthTokenSecretKey= 'hbt_TwitterTimelinePlugin_oauth_secret';
-	private $handleKey			= 'hbt_TwitterTimelinePlugin_handle';
+	private $oauthTokenSecretKey	= 'hbt_TwitterTimelinePlugin_oauth_secret';
+	private $handleKey		= 'hbt_TwitterTimelinePlugin_handle';
 	
-	private $authorizedUserKey = 'hbt_TwitterTimelinePlugin_authorized_user';
+	private $authorizedUserKey 	= 'hbt_TwitterTimelinePlugin_authorized_user';
 
 	
 	public function pluginDidActivate(){
@@ -166,7 +166,6 @@ class TwitterTimelinePlugin extends AllSpark
 			);
 			
 			if(!get_transient( $this->authorizedUserKey )){
-				sleep(2);
 				set_transient( $this->authorizedUserKey, $conn->get('account/verify_credentials'), 86400 ); 
 			}
 			
