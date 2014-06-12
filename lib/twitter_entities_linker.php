@@ -110,7 +110,7 @@ class TwitterEntitiesLinker {
         }
         else if ( $entity['data']->type == 'hashtags' ) {
           $text = $entity['data']->text;
-          $html .= '<a href="http://twitter.com/hash/'.$text.'?src=hash" title="#'.$text.'" class="twitter-hashtag" rel="nofollow">#'.self::highlightText($text, $highlight).'</a>';
+          $html .= '<a href="http://twitter.com/hashtag/'.$text.'?src=hash" title="#'.$text.'" class="twitter-hashtag" rel="nofollow">#'.self::highlightText($text, $highlight).'</a>';
         }
         else if ( $entity['data']->type == 'symbols' ) {
           $text = $entity['data']->text;
