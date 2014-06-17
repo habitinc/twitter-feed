@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Twitter Timeline
-Plugin URI: http://ignitionmedia.ca
+Plugin URI: https://github.com/habitinc/twitter-feed
 Description: Allows authenticating for and retrieving a Twitter timeline
 Version: 1.0
-Author: Ignition Media
-Author URI: http://ignitiomedia.ca
+Author: Habit
+Author URI: http://habithq.ca
 */
 
 if ( ! defined('ABSPATH') ) {
