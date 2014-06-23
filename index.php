@@ -14,9 +14,7 @@ if ( ! defined('ABSPATH') ) {
 
 require_once 'TwitterTimelinePlugin.class.php';
 
-$twitter_plugin = new TwitterTimelinePlugin();
-
 function fetch_tweets($screen_name = 'twitter', $skipcache = false){
 	global $twitter_plugin;
-	return $twitter_plugin->fetch_tweets($screen_name, $skipcache);
+	return TwitterTimelinePlugin::getInstance()->fetch_tweets($screen_name, $skipcache);
 }

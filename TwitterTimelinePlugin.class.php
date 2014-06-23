@@ -20,17 +20,17 @@ class TwitterTimelinePlugin extends AllSpark
 		parent::__construct();
 		$this->listen_for_ajax_action('twitter_auth');
 		
+		/*
 		$this->clientID		= get_option($this->clientIDKey);
 		$this->clientSecret	= get_option($this->clientSecretKey);
 		$this->client_auth	= get_option($this->clientAuthKey);
 		
 		$this->authkey 		= get_option($this->clientAuthKey);
 		$this->handle		= get_option($this->handle);
+		*/
 	}
 		
 	public function init(){
-		parent::init();
-				
 		if(isset($_GET['start_auth'])){
 		
 			// Populate the API Key
@@ -189,4 +189,6 @@ class TwitterTimelinePlugin extends AllSpark
 		wp_redirect( admin_url( 'options-general.php?page=twitter-timeline' ) );
 	}
 }
-?>
+
+
+TwitterTimelinePlugin::getInstance();
